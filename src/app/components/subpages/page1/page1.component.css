@@ -1,0 +1,28 @@
+
+.example-card {
+    max-width: 50%;
+    top:100px;
+    left: 15%;
+    margin: 50px;
+  }
+
+.arthur {
+    max-width: 20%;
+    top:100px;
+    position: fixed;
+    left: 75%;
+}
+.example-header-image {
+    background-image: url('http://img5.imgtn.bdimg.com/it/u=339344996,2498674221&fm=26&gp=0.jpg');
+    background-size: cover;
+  }
+.center {
+  text-align: center;
+  color:red;  
+}
+
+.boder {
+  border-left: solid blueviolet 5px;
+  padding: 6px;
+  
+}

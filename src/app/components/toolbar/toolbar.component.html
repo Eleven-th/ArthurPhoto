@@ -1,0 +1,54 @@
+<mat-toolbar color="primary" class="demo-app-header">
+    <button mat-icon-button (click)="sideNav.toggle()">
+        <mat-icon>
+            {{sideNav.opened? 'close':'menu'}}
+        </mat-icon>
+    </button>
+    <span>
+        Arthur Pt
+    </span>
+    <!-- //在这之后的空间都会被推到后面 -->
+    <span class="toolbar-seprator"></span>
+    <!-- 设置菜单触发 -->
+        <button mat-icon-button  [matMenuTriggerFor]="messageMenu" #menuTrigger="matMenuTrigger">
+            <mat-icon>
+                message
+            </mat-icon>
+        </button>
+        <a mat-icon-button [routerLink]="['/homepage']">
+            <mat-icon>
+                exit_to_app
+            </mat-icon>
+        </a>
+</mat-toolbar>
+
+<!-- sideNav -->
+<mat-sidenav-container class="demo-app-container">
+    <mat-sidenav #sideNav (opened)="true" mode="side" class="demo-app-sidenav"> 
+        
+        <mat-nav-list>
+
+                <!-- 另一组选单 -->
+                <a [routerLink]="['/homepage']" mat-list-item>首頁</a>
+                <mat-divider></mat-divider>
+
+                <!-- 第一组选单 -->
+                <h3 matSubheader>方法教学</h3>
+                <a [routerLink]="['/subpages1']" mat-list-item>跟电影学构图</a>
+                <mat-divider></mat-divider>
+                <a [routerLink]="['/subpages2']" mat-list-item>用手机拍出好照片</a>
+                <mat-divider></mat-divider>
+                <a [routerLink]="['/subpages3']" mat-list-item>新手常见的拍照误区</a>
+                <mat-divider></mat-divider>
+                <a [routerLink]="['/subpages4']" mat-list-item>爬楼日记</a>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
+
+<!-- menu -->
+<mat-menu #messageMenu="matMenu">
+        <a mat-menu-item [routerLink]="['/comment']">评论</a>
+        <mat-divider></mat-divider>
+        <a [routerLink]="['/questionnaire']" mat-menu-item>调查问卷</a>
+</mat-menu>
+

@@ -1,0 +1,42 @@
+<mat-card class="card">
+  <h3 >评论</h3>
+<p>
+<mat-form-field appearance="outline">
+  <mat-label>请输入你的姓名</mat-label>
+  <input matInput placeholder="name" [formControl]="name">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-error *ngIf="name.hasError('required')">
+    姓名不能为空
+  </mat-error>
+</mat-form-field>
+</p>
+
+  
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="例如，xxxx@gmail.com" [formControl]="emailFormControl"
+            [errorStateMatcher]="matcher">
+    <mat-label>请输入你的邮箱</mat-label>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      请输入<strong>正确的</strong>邮箱地址！
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      邮箱不能为 <strong>空</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<div class="example-container">
+    <mat-form-field hintLabel="评论最大不超过100个字">
+      <input  matInput #input maxlength="100" placeholder="发表评论" [formControl]="comment">
+      <mat-hint align="end">{{input.value?.length || 0}}/100</mat-hint>
+      <mat-error *ngIf="comment.hasError('required')">
+      评论不能为空</mat-error>
+      <mat-error *ngIf="comment.hasError('maxLength')">
+        评论字数已经达到上限
+      </mat-error>
+    </mat-form-field>
+</div>
+
+<button type="submit" >发表评论</button>
+</mat-card>

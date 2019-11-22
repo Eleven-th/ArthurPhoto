@@ -118,6 +118,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@~8.2.3":
+  version "8.2.3"
+  resolved "https://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-8.2.3.tgz#16b96ffa935cbf5a646757ecaf2b19c434678f72"
+  integrity sha1-Frlv+pNcv1pkZ1fsrysZxDRnj3I=
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~8.3.4":
   version "8.3.19"
   resolved "https://registry.npm.taobao.org/@angular/cli/download/@angular/cli-8.3.19.tgz#c8ffb91a9a3662ad8eeb9151982fd59a39ee800a"
@@ -192,6 +201,13 @@
   version "8.2.14"
   resolved "https://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-8.2.14.tgz#e18b27a6841577ce489ad31540150da5a444ca37"
   integrity sha1-4YsnpoQVd85ImtMVQBUNpaREyjc=
+
+"@angular/material@^8.2.3":
+  version "8.2.3"
+  resolved "https://registry.npm.taobao.org/@angular/material/download/@angular/material-8.2.3.tgz#16543e4e06a3fde2651a25cfe126e88e714ae105"
+  integrity sha1-FlQ+Tgaj/eJlGiXP4SbojnFK4QU=
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~8.2.5":
   version "8.2.14"
@@ -3533,6 +3549,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.npm.taobao.org/hammerjs/download/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/handle-thing/download/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -5584,6 +5605,11 @@ parse5@4.0.0:
   resolved "https://registry.npm.taobao.org/parse5/download/parse5-4.0.0.tgz?cache=0&sync_timestamp=1573036762880&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparse5%2Fdownload%2Fparse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha1-bXhlbj2o14tOwLkG98CO8d/j9gg=
 
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.npm.taobao.org/parse5/download/parse5-5.1.1.tgz?cache=0&sync_timestamp=1573036762880&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparse5%2Fdownload%2Fparse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha1-9o5OW6GFKsLK3AD0VV//bCq7YXg=
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.npm.taobao.org/parseqs/download/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -7328,7 +7354,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@1.10.0, tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.10.0, tslib@^1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
