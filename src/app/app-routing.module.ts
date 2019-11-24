@@ -8,6 +8,7 @@ import { Page4Component } from './components/subpages/page4/page4.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
   {path: 'questionnaire', component: QuestionnaireComponent},
   {path: 'comment', component: CommentComponent},
+  {path: '', redirectTo: '/homepage', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({

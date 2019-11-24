@@ -18,7 +18,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class CommentComponent implements OnInit {
 
-
+  comments: comment[];
   name = new FormControl('', [
     Validators.required,
   ]);
@@ -36,18 +36,30 @@ export class CommentComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
 
-  constructor(private service1service: Service1Service ) { }
+  constructor(private service1service: Service1Service, ) { }
 
   ngOnInit() {
+    this.getcomment();
   }
 
   onSubmit(): void {
-    if(!this.name.value || !this.emailFormControl.value ) {return;}
-    const name=this.name.value;
-    const email=this.emailFormControl.value;
-    const content=this.comment.value;
-    const newcomment = {name,email,content}  as comment;
-    this.service1service.updateComment(newcomment).subscribe(flag =>console.log(flag));
-    
+    if ( !this.name.value || !this.emailFormControl.value ) {return; }
+    const name = this.name.value;
+    const email = this.emailFormControl.value;
+    const content = this.comment.value;
+    const newcomment = {name, email, content}  as comment;
+    this.service1service.updateComment(newcomment).subscribe();
+    this.clearall();
+    this.getcomment();
+  }
+
+  clearall(): void {
+    this.name.setValue(' ');
+    this.emailFormControl.setValue(' ');
+    this.comment.setValue(' ');
+  }
+
+  getcomment(): void {
+    this.service1service.getAllComment().subscribe(com => this.comments = com);
   }
 }

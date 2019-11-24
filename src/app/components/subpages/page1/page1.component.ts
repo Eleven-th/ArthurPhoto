@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { describe } from 'src/app/models/describe';
 import { Service1Service } from 'src/app/services/service1.service';
+import { author } from 'src/app/models/author';
 
 @Component({
   selector: 'app-page1',
@@ -10,16 +11,20 @@ import { Service1Service } from 'src/app/services/service1.service';
 export class Page1Component implements OnInit {
 
   describes: describe[];
-  title = " 如何用手机拍照 ";
+  authors: author[];
 
   constructor(private service1service: Service1Service) { }
-  
   ngOnInit() {
-    this.getalldes();
+    this.getpage1();
+    this.getauthor();
   }
 
-  getalldes(): void {
-    this.service1service.getall().subscribe( des => this.describes = des);
+
+  getpage1(): void {
+    this.service1service.getPage1().subscribe(des => this.describes = des);
   }
 
+  getauthor(): void {
+    this.service1service.getAuthor().subscribe(aur => this.authors = aur);
+  }
 }

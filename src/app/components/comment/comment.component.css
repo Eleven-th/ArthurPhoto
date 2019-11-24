@@ -22,4 +22,15 @@
     max-width: 70%;
     left: 15%;
     top: 100px;
+    padding: 20px;
+    margin: 50px;
+  }
+  
+  .button {
+    right: 2%;
+    margin: 20px;
+  }
+
+  .fontsize {
+    font-size: 5px;
   }

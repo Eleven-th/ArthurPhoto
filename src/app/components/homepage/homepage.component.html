@@ -1,6 +1,6 @@
 <mat-card class="example-card1">
     <mat-card-header>
-      <mat-card-title>{{homepage[0].title}}</mat-card-title>
+      <mat-card-title class="title"><strong>{{homepage[0].title}}</strong></mat-card-title>
     </mat-card-header>
     <img mat-card-image src={{homepage[0].img}} alt="Photo of a Shiba Inu">
     <mat-card-content>
@@ -9,13 +9,16 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-button [routerLink]="['/subpages1']">Learn More ···</a>
+      <a mat-button [routerLink]="['/subpages1']" class="learnmore" >Learn More ···
+        <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+      </a>
+
     </mat-card-actions>
   </mat-card>
   
   <mat-card class="example-card2">
     <mat-card-header>
-      <mat-card-title>{{homepage[1].title}}</mat-card-title>
+      <mat-card-title class="title"><strong>{{homepage[1].title}}</strong></mat-card-title>
     </mat-card-header>
     <img mat-card-image src={{homepage[1].img}} alt="Photo of a Shiba Inu">
     <mat-card-content>
@@ -24,13 +27,14 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-button [routerLink]="['/subpages2']">Learn More ···</a>
+      <a mat-button [routerLink]="['/subpages2']" class="learnmore">Learn More ···
+        <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon></a>
     </mat-card-actions>
   </mat-card>
   
   <mat-card class="example-card3">
     <mat-card-header>
-      <mat-card-title>{{homepage[2].title}}</mat-card-title>
+      <mat-card-title><strong>{{homepage[2].title}}</strong></mat-card-title>
     </mat-card-header>
     <img mat-card-image src={{homepage[2].img}} alt="Photo of a Shiba Inu">
     <mat-card-content>
@@ -39,13 +43,13 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-button [routerLink]="['/subpages3']">Learn More ···</a>
+      <a mat-button [routerLink]="['/subpages3']" class="learnmore">Learn More ···<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon></a>
     </mat-card-actions>
   </mat-card>
   
   <mat-card class="example-card4">
     <mat-card-header >
-      <mat-card-title >{{homepage[3].title}}</mat-card-title>
+      <mat-card-title ><strong>{{homepage[3].title}}</strong></mat-card-title>
     </mat-card-header>
     <img mat-card-image src={{homepage[3].img}} alt="Photo of a Shiba Inu">
     <mat-card-content>
@@ -54,7 +58,7 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-button [routerLink]="['/subpages4']">Learn More ···</a>
+      <a mat-button [routerLink]="['/subpages4']" class="learnmore">Learn More ···<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon></a>
     </mat-card-actions>
   </mat-card>
  

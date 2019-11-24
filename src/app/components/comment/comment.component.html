@@ -28,7 +28,7 @@
 
 <form class="example-container" (ngSubmit)="onSubmit()">
     <mat-form-field hintLabel="评论最大不超过100个字">
-      <input  matInput #input maxlength="100" placeholder="发表评论" [formControl]="comment">
+      <input  matInput #input maxlength="100" placeholder="写下你的想法" [formControl]="comment">
       <mat-hint align="end">{{input.value?.length || 0}}/100</mat-hint>
       <mat-error *ngIf="comment.hasError('required')">
       评论不能为空</mat-error>
@@ -37,6 +37,14 @@
       </mat-error>
     </mat-form-field>
 </form>
+<button mat-stroked-button color="warn" type="submit" (click)="onSubmit()" class="button" >发表评论</button>
+</mat-card>
 
-<button type ="submit" (click)="onSubmit()" >发表评论</button>
+<mat-card class="card"*ngFor="let com of comments">
+  <mat-card-title>{{com.name}}</mat-card-title>
+  <mat-card-subtitle>{{com.email}}</mat-card-subtitle>
+  <mat-card-content>{{com.content}}</mat-card-content>
+  <mat-card-footer class="fontsize" >
+      你所说的话不一定正确，但我誓死扞卫你说话的权利。What you said is not necessarily correct, but I swear to defend your right to speak.  
+  </mat-card-footer>
 </mat-card>

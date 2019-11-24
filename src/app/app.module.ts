@@ -15,6 +15,7 @@ import { Page4Component } from './components/subpages/page4/page4.component';
 import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     Page1Component,
     Page2Component,
     Page3Component,
-    Page4Component
+    Page4Component,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
