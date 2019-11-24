@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material';
+import { Service1Service } from '../../services/service1.service';
+import { comment } from 'src/app/models/comment';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -15,6 +17,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
+
 
   name = new FormControl('', [
     Validators.required,
@@ -32,9 +35,19 @@ export class CommentComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor() { }
+
+  constructor(private service1service: Service1Service ) { }
 
   ngOnInit() {
   }
 
+  onSubmit(): void {
+    if(!this.name.value || !this.emailFormControl.value ) {return;}
+    const name=this.name.value;
+    const email=this.emailFormControl.value;
+    const content=this.comment.value;
+    const newcomment = {name,email,content}  as comment;
+    this.service1service.updateComment(newcomment).subscribe(flag =>console.log(flag));
+    
+  }
 }
