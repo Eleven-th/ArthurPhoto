@@ -17,7 +17,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
-
+ 
   comments: comment[];
   name = new FormControl('', [
     Validators.required,
@@ -32,7 +32,7 @@ export class CommentComponent implements OnInit {
     Validators.required,
     Validators.maxLength(99),
   ]);
-
+  
   matcher = new MyErrorStateMatcher();
 
 
@@ -62,4 +62,5 @@ export class CommentComponent implements OnInit {
   getcomment(): void {
     this.service1service.getAllComment().subscribe(com => this.comments = com);
   }
+
 }

@@ -37,7 +37,7 @@
       </mat-error>
     </mat-form-field>
 </form>
-<button mat-stroked-button color="warn" type="submit" (click)="onSubmit()" class="button" >发表评论</button>
+<button mat-stroked-button color="warn" [disabled]="!name.valid || !comment.valid || !emailFormControl.valid"  (click)="onSubmit()" class="button" >发表评论</button>
 </mat-card>
 
 <mat-card class="card"*ngFor="let com of comments">
