@@ -1,1 +1,11 @@
-<p>slider works!</p>
+<div class="show"  (mouseenter)="stopPlay()" (mouseleave)="autoPlay()">
+    <span (click)="playPre()"></span>
+    <ul [@carousel] = 'state' (@carousel.done)="afterPlay()">
+        <li *ngFor="let pic of pictures">
+            <mat-card class="card">
+                <img mat-card-image src={{pic.url}} alt="图片加载中">
+              </mat-card>
+        </li>
+    </ul>
+    <span (click)="playNext()"></span>
+</div>

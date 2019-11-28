@@ -8,6 +8,7 @@ import { Page4Component } from './components/subpages/page4/page4.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'subpages4', component: Page4Component},
   {path: 'homepage', component: HomepageComponent},
   {path: 'comment', component: CommentComponent},
+  {path: 'slider', component: SliderComponent},
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];

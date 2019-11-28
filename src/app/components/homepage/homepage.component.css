@@ -1,26 +1,26 @@
 .example-card4{
-    max-width: 20%;
+    max-width: 20vw;
     position: fixed;
     top:100px;
     right:2%;
   }
 
   .example-card3 {
-    max-width: 20%;
+    max-width: 20vw;
     position: fixed;
     right: 26.5%;
     top:100px;
   }
 
   .example-card2 {
-    max-width: 20%;
+    max-width: 20vw;
     top:100px;
     position: fixed;
     left: 26.5%;
   }
 
   .example-card1 {
-    max-width: 20%;
+    max-width: 20vw;
     position: fixed;
     top:100px;
     left: 2%;

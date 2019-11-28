@@ -5,6 +5,7 @@ import { describe } from '../models/describe';
 import { homepage } from '../models/homepage';
 import { comment } from '../models/comment';
 import { author } from '../models/author';
+import { pictures } from '../models/pictures';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,7 @@ export class Service1Service {
   private page3Url = "http://127.0.0.1:2403/page3";
   private page4Url = "http://127.0.0.1:2403/page4";
   private authorUrl = "http://127.0.0.1:2403/author";
+  private picturesUrl = "http://127.0.0.1:2403/pictures";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -52,5 +54,9 @@ export class Service1Service {
 
   getAuthor(): Observable<author[]> {
     return this.httpClient.get<author[]>(this.authorUrl);
+  }
+
+  getPictures(): Observable<pictures[]>{
+    return this.httpClient.get<pictures[]>(this.picturesUrl);
   }
 }
