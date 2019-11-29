@@ -46,11 +46,11 @@ export class SliderComponent implements OnInit {
   getPictures(): void {
     this.service1Service.getPictures().subscribe( pic => this.pictures = pic);
   }
-  autoPlay():void {
-    const me =this;
+  autoPlay(): void {
+    const me = this;
     this.timer = setInterval(() => {
       me.state = me.state === 'stay' ? 'moveLeft' : 'stay';
-    },3000);
+    }, 3000);
   }
   afterPlay(): void {
     if (this.state === 'stay' || this.state === 'moveLeft') {

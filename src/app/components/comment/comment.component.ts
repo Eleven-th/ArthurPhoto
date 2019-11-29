@@ -43,7 +43,7 @@ export class CommentComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if ( !this.name.value || !this.emailFormControl.value ) {return; }
+    if ( !this.name.value || !this.emailFormControl.value || !this.comment.value ) {return; }
     const name = this.name.value;
     const email = this.emailFormControl.value;
     const content = this.comment.value;

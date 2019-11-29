@@ -12,7 +12,6 @@ import { pictures } from '../models/pictures';
 })
 export class Service1Service {
 
-  private url = " http://127.0.0.1:2403/photo";
   private homepageUrl = " http://127.0.0.1:2403/homepage";
   private commetUrl = "http://127.0.0.1:2403/comment"
   private page1Url = "http://127.0.0.1:2403/page1";
@@ -23,10 +22,6 @@ export class Service1Service {
   private picturesUrl = "http://127.0.0.1:2403/pictures";
 
   constructor(private httpClient: HttpClient) { }
-
-  getall(): Observable<describe[]> {
-    return this.httpClient.get<describe[]>(this.url);
-   }
 
   getAllHomepages(): Observable<homepage[]> {
     return this.httpClient.get<homepage[]>(this.homepageUrl);
